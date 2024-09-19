@@ -1,7 +1,7 @@
 import { Client } from 'pg';
 import express from 'express';
 import { Request, Response } from 'express';
-import db from './config/db';
+import db from './db';
 
 const app = express();
 app.use(express.json());
