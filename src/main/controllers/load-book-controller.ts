@@ -9,6 +9,10 @@ export class LoadBookController implements Controller {
   async perform(req: Request, res: Response) {
     const { id: bookId } = req.params
     const book = await this.loadBookUsecase.execute(Number(bookId));
-    res.status(200).json(book);
+    if (book) {
+      res.status(200).json(book);
+    } else {
+      res.status(404).json(book);
+    }
   }
 }
