@@ -30,5 +30,12 @@ describe('API Books', () => {
     expect(response.status).toBe(201);
   });
 
+  it('deve recuperar o livro', async () => {
+    const bookId = 1
+    const response = await request(app).get(`/books/${bookId}`);
+    console.log("book: ", response.body)
+    expect(response.status).toBe(200);
+  });
+
 })
 
