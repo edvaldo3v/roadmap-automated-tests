@@ -13,3 +13,11 @@ start:
 stop:
 	@docker-compose down
 
+restart:
+	@docker-compose restart
+
+test:
+	@npm run test:i
+
+spec:
+	@npm run test:u
