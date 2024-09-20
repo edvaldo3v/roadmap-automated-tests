@@ -15,5 +15,6 @@ export async function createBooksTable(client: Client) {
   await client.query(sql);
 }
 
+
 export default client;
 
