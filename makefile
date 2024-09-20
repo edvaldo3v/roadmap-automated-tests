@@ -14,7 +14,8 @@ stop:
 	@docker-compose down
 
 restart:
-	@docker-compose restart
+	@docker-compose down
+	@docker-compose up -d
 
 test:
 	@npm run test:i

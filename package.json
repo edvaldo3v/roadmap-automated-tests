@@ -9,6 +9,7 @@
   "license": "ISC",
   "scripts": {
     "dev": "tsx watch src/server.ts",
+    "test": "vitest",
     "test:i": "vitest --config ./vitest.config.integration.ts",
     "test:u": "vitest --config ./vitest.config.unit.ts"
   },
