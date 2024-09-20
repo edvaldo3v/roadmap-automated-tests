@@ -18,14 +18,12 @@ O objetivo do treinamento é mostrar a aplicação de testes automatizados em um
 
 > ## Princípios
 
-* Single Responsibility Principle (SRP)
-<!-- * Open Closed Principle (OCP) -->
-* Interface Segregation Principle (ISP)
-* Dependency Inversion Principle (DIP)
-* Separation of Concerns (SOC)
-* Don't Repeat Yourself (DRY)
-* You Aren't Gonna Need It (YAGNI)
-* Keep It Simple, Silly (KISS)
+* Single Responsibility Principle
+* Interface Segregation Principle
+* Dependency Inversion Principle
+* Don't Repeat Yourself
+* You Aren't Gonna Need It
+* Keep It Simple, Silly
 * Small Commits
 
 > ## Design Patterns
@@ -45,10 +43,13 @@ O objetivo do treinamento é mostrar a aplicação de testes automatizados em um
 > ## Bibliotecas e Ferramentas
 
 * Nodejs
+* Express
+* TestContainer
 * Http
 * Git
+* PostgreSQL
 
-> ## Features do Dart/Flutter
+> ## Features do JavaScript/TypeScript
 * Classes
 * Abstract Classes
 * Functions
@@ -63,6 +64,4 @@ O objetivo do treinamento é mostrar a aplicação de testes automatizados em um
 * Testes de Integração
 * Cobertura de Testes
 * Test Doubles
-* Mocks
-* Stubs
-* Spies
+ * Mocks
