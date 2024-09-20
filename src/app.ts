@@ -1,19 +1,17 @@
 import express from 'express';
 import routes from './routes'
-import db, { createBooksTable } from './db';
+import { Client } from "pg";
+import { createBooksTable } from './db';
 
 const app = express();
 app.use(express.json());
 
-const startDB = async () => {
+
+export const applicationConnection = async (app: express.Application, db: Client) => {
   await db.connect();
   await createBooksTable(db)
+  routes(app, db)
 }
-
-startDB()
-
-
-routes(app)
 
 export default app
 
