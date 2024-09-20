@@ -21,14 +21,14 @@ afterAll(async () => {
 
 describe('API Books', () => {
 
-  it('deve registar um livro', async () => {
+  it('deve retornar um livro pelo id', async () => {
     const book = {
       name: "itgest",
       author: "Pedro Kondo"
     }
-    const response = await request(app).post('/books').send(book);
-    expect(response.status).toBe(201);
+    await request(app).post('/books').send(book);
+
+    const response = await request(app).get('/books/1');
+    expect(response.status).toBe(200);
   });
-
 })
-
