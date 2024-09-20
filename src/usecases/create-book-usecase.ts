@@ -6,9 +6,9 @@ export class CreateBookUsecase implements ICreateBookUsecase {
   constructor(
     private readonly bookRepository: IBookRepository,
   ) { }
-  async execute(book: Book): Promise<void> {
+  async execute(book: Book): Promise<boolean> {
     await this.bookRepository.save(book)
-    return
+    return true
   }
 
 }
