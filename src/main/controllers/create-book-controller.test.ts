@@ -23,8 +23,8 @@ describe('API Books', () => {
 
   it('deve registar um livro', async () => {
     const book = {
-      name: "itgest",
-      author: "Pedro Kondo"
+      name: "title",
+      author: "Author Name"
     }
     const response = await request(app).post('/books').send(book);
     expect(response.status).toBe(201);
@@ -35,6 +35,14 @@ describe('API Books', () => {
     const response = await request(app).get(`/books/${bookId}`);
     console.log("book: ", response.body)
     expect(response.status).toBe(200);
+  });
+
+  it('Não deve registar o livro sem fornecer o author', async () => {
+    const book = {
+      name: "title",
+    }
+    const response = await request(app).post('/books').send(book);
+    expect(response.status).toBe(403);
   });
 
 })

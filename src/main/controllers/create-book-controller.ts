@@ -8,7 +8,13 @@ export class CreateBookController implements Controller {
     private readonly createBookUsecase: ICreateBookUsecase
   ) { }
   async perform(req: Request, res: Response) {
-    const data: Book = req.body;
+    const { name, author } = req.body;
+
+    if (!author) {
+      return res.status(403).json({ error: "filed auth is required" });
+    }
+
+    const data: Book = { name, author };
     const book = await this.createBookUsecase.execute(data);
     res.status(201).json(book);
   }
